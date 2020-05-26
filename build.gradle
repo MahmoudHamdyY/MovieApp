@@ -1,0 +1,50 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext {
+        androidXTestRules = "1.1.1"
+        androidXarchCoreTestingVersion = "2.0.1"
+        nhaarmanMockitoKotlinVersion = "2.1.0"
+        roomVersion = '2.2.4'
+        appcompatVersion = '1.1.0'
+        androidxCoreVersion = '1.1.0'
+        constraintlayoutVersion = '1.1.3'
+        androidxlifecycleVersion = '2.2.0'
+        junitVersion = '4.12'
+        androidxJunitVersion = '1.1.1'
+        andoridXEspressoVersion = "3.2.0"
+        androidxRecyclerviewVersion = '1.1.0'
+        androidxCardviewVersion = '1.0.0'
+        rxjavaVersion = '2.2.9'
+        rxandroidVersion = '2.0.2'
+        retrofitVersion = '2.5.0'
+        gsonVersion = '2.4.0'
+        retrofit2Rxjava2Version = '2.4.0'
+        okhttp3Version = '3.12.1'
+        glideVersion = '4.10.0'
+    }
+    repositories {
+        google()
+        jcenter()
+        
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.6.1'
+        
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

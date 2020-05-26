@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.MovieOverviewActivity">
+
+    <ImageView
+        android:id="@+id/progress_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/progress_animation"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/movie_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/movie_poster"
+            android:src="@drawable/superman"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/movie_name"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:text="SupperMan"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/movie_image" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/movie_description_bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        android:background="@drawable/bg_movie_overview"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        app:behavior_peekHeight="420dp"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:id="@+id/name_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="SupperMan"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_default="wrap" />
+
+                <TextView
+                    android:id="@+id/description_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="The first time we see Superman in his red, blue and yellow uniform is nearly an hour into Superman. Perhaps the filmmakers agreed with Spielberg's famous statement that Jaws would work better the longer he kept the shark off the screen. That means the film doesn't open like most superhero movies or James Bonds with a sensational pre-title sequence. To be sure, it opens on the planet Krypton with his father Jor-El preparing him to be launched into space. But those aren't action scenes; they provide weight to the origin story every superhero requires.In fact, Richard Donner's Superman (1978) is surprisingly slow-starting. The scenes of young Clark Kent's boyhood and adolescence might seem pointless if we didn't know, and somedayâ€¦that child will grow up to be Superman. The high school football scene, where the future Man of Steel gets bullied and has a cute girl snatched away from him, pay off later in establishing Clark Kent as a shy and, yes, mild-mannered reporter. But they also raise the intriguing question: Who is this being, anyway.He is clearly not human. His body is not from our world. It's probable he can't reproduce here, or perhaps even have sex with the cute girl -- or Lois Lane. Toward the end, when Lex Luthor's girlfriend kisses him, his response (before flying off to stop an earthquake) is positively Vulcan-like; he wonders why she kissed him before, and not after, freeing him from the Kryptonite."
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toBottomOf="@id/name_tv" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
